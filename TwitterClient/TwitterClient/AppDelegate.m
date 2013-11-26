@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "TimelineViewController.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,6 +18,14 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    UIViewController *timelineViewController = [[TimelineViewController alloc] initWithNibName:@"TimelineViewController" bundle:nil];
+    UINavigationController *timelineViewControllerNav = [[UINavigationController alloc] initWithRootViewController:timelineViewController];
+
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[timelineViewControllerNav];
+
+    self.window.rootViewController = self.tabBarController;
     return YES;
 }
 
