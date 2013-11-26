@@ -20,9 +20,10 @@
 
 @implementation TweetEntity
 
--(void)setEntity:(NSDictionary*)dict{
+-(void)setEntity:(NSDictionary*)dict{    
     self.text = dict[@"text"];
     self.created_at = dict[@"created_at"];
+    self.tweetId = dict[@"id"];
     
     UserEntity *userEntity = [[UserEntity alloc] init];
     [userEntity setEntity:dict[@"user"]];

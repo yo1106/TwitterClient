@@ -14,5 +14,6 @@
 @interface TimelineViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *tweets;
+@property (nonatomic, strong) NSString *lastTweetId;
 
 @end

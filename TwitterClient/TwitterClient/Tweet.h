@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *created_at;
+@property (nonatomic, strong) NSString *tweetId;
 
 @property (nonatomic, strong) UserEntity *userEntity;
 

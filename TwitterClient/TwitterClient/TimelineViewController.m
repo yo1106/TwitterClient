@@ -39,7 +39,8 @@
     self.tweets = [[NSMutableArray alloc] init];
 
     
-    self.title = @"タイムライン";
+//    self.title = @"タイムライン";
+    self.title = self.lastTweetId;
 
     [self getTimeline];
 
@@ -105,7 +106,7 @@
         cell.tweetTextLabel.frame = frame;
 
 
-        cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
+        cell.tweetUserNameLabel.text = [NSString stringWithFormat:@"%@ %@", tweetEntity.tweetId, tweetEntity.userEntity.name];
         cell.tweetCreated.text = tweetEntity.created_at;
         NSString *imageURL = tweetEntity.userEntity.profileImageURL;
         [cell.tweetUserAvatarImageView loadImage:imageURL];
@@ -143,6 +144,12 @@
                                             //認証が必要な要求に関する設定
                                             NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
                                             [params setObject:@"1" forKey:@"include_entities"];
+                                            [params setObject:@"10" forKey:@"count"];
+
+                                            if([self.tweets count]){
+                                                [params setObject:self.lastTweetId forKey:@"max_id"];
+                                            }
+                                            NSLog(@"params:%@", params);
                                             //リクエストを生成
                                             NSURL *url = [NSURL URLWithString:apiURL];
                                             SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
@@ -167,12 +174,21 @@
                                                     NSError *jsonError;
                                                     NSArray *tweets = [NSJSONSerialization JSONObjectWithData:responseData
                                                                                                       options: NSJSONReadingMutableLeaves error:&jsonError];
+                                                    
                                                     for (NSDictionary *tweet in tweets){
                                                         TweetEntity *tweetEntity = [[TweetEntity alloc] init];
                                                         [tweetEntity setEntity:tweet];
                                                         [self.tweets addObject:tweetEntity];
                                                     }
-                                                    NSLog(@"finish:%lu", (unsigned long)[self.tweets count]);
+                                                    //ページングのために一つ消して、最後のIDとして保持
+                                                    TweetEntity *lastTweet = [self.tweets lastObject];
+                                                    self.lastTweetId = lastTweet.tweetId;
+                                                    NSLog(@"%@", self.lastTweetId);
+//                                                    self.lastTweetId = @"405280627789803520";
+                                                    self.title = [NSString stringWithFormat:@"%@", self.lastTweetId];
+                                                    
+                                                    [self.tweets removeLastObject];
+                                                    
                                                     //Tweet取得完了に伴い、Table Viewを更新
                                                     [self refreshTableOnFront];
                                                 }
@@ -184,6 +200,16 @@
                                 }];
 }
 
+//最後まで来たら呼ばれる？
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"scrollViewDidEndDecelerating");
+    
+    if(![UIApplication sharedApplication].networkActivityIndicatorVisible){
+        [self getTimeline];
+    }
+
+}
 
 //フロント側でテーブルを更新
 - (void) refreshTableOnFront {

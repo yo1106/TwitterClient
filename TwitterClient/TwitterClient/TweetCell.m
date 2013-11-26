@@ -46,10 +46,7 @@
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                                context:nil];
     CGSize size = rect.size;
-
-    NSLog(@"%@", text);
-    
-    
+        
     CGFloat top = 20.0f;
     CGFloat bottom = 20.0f;
     return size.height + top + bottom;
