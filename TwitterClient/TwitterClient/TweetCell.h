@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Tweet.h"
+
 #import "UIAsyncImageView.h"
 
 @interface TweetCell : UITableViewCell
@@ -18,6 +20,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *tweetCreated;
 
 -(CGFloat)calculateCellHeightWithText:(NSString *)text;
-
+- (void)setEntity:(TweetCell*)cell tweetEntity:(TweetEntity*)tweetEntity;
 
 @end

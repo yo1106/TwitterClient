@@ -27,6 +27,7 @@
 		F6E1121B18444329001C5226 /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E1121A18444329001C5226 /* TweetCell.xib */; };
 		F6E1121F18444988001C5226 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1121E18444988001C5226 /* Tweet.m */; };
 		F6E1122318447550001C5226 /* UIAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1122218447550001C5226 /* UIAsyncImageView.m */; };
+		F6E1DAC618458D3C006874FF /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DAC518458D3C006874FF /* TwitterClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		F6E1121E18444988001C5226 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		F6E1122118447550001C5226 /* UIAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAsyncImageView.h; sourceTree = "<group>"; };
 		F6E1122218447550001C5226 /* UIAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAsyncImageView.m; sourceTree = "<group>"; };
+		F6E1DAC418458D3C006874FF /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
+		F6E1DAC518458D3C006874FF /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,8 @@
 			children = (
 				F6E1122118447550001C5226 /* UIAsyncImageView.h */,
 				F6E1122218447550001C5226 /* UIAsyncImageView.m */,
+				F6E1DAC418458D3C006874FF /* TwitterClient.h */,
+				F6E1DAC518458D3C006874FF /* TwitterClient.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				F6E111E418442DEF001C5226 /* AppDelegate.m in Sources */,
 				F6E1121118443906001C5226 /* TimelineViewController.m in Sources */,
 				F6E111E018442DEF001C5226 /* main.m in Sources */,
+				F6E1DAC618458D3C006874FF /* TwitterClient.m in Sources */,
 				F6E1122318447550001C5226 /* UIAsyncImageView.m in Sources */,
 				F6E1121F18444988001C5226 /* Tweet.m in Sources */,
 				F6E1121918444309001C5226 /* TweetCell.m in Sources */,
@@ -513,6 +519,7 @@
 				F6E111FE18442DEF001C5226 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6E111FF18442DEF001C5226 /* Build configuration list for PBXNativeTarget "TwitterClientTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +528,7 @@
 				F6E1120118442DEF001C5226 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

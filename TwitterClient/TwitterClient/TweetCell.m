@@ -26,6 +26,24 @@
     // Configure the view for the selected state
 }
 
+- (void)setEntity:(TweetCell*)cell tweetEntity:(TweetEntity*)tweetEntity
+{
+    cell.tweetTextLabel.text = tweetEntity.text;
+    cell.tweetTextLabel.numberOfLines = 0;
+    
+    // こいつを書いておかないと、labelの横幅が勝手に変わってしまってデザインが崩れる。
+    CGRect frame = cell.tweetTextLabel.frame;
+    [cell.tweetTextLabel sizeToFit];
+    frame.size.height = cell.tweetTextLabel.frame.size.height;
+    cell.tweetTextLabel.frame = frame;
+    
+    
+    cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
+    cell.tweetCreated.text = tweetEntity.created_at;
+    NSString *imageURL = tweetEntity.userEntity.profileImageURL;
+    [cell.tweetUserAvatarImageView loadImage:imageURL];
+}
+
 -(CGFloat)calculateCellHeightWithText:(NSString *)text
 {
     // TODO : UILabel の高さ計算 [2]
