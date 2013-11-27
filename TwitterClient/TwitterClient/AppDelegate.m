@@ -10,6 +10,7 @@
 
 
 #import "TimelineViewController.h"
+#import "TweetPostViewController.h"
 
 @implementation AppDelegate
 
@@ -20,11 +21,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UIViewController *timelineViewController = [[TimelineViewController alloc] initWithNibName:@"TimelineViewController" bundle:nil];
+    TimelineViewController *timelineViewController = [[TimelineViewController alloc] initWithNibName:@"TimelineViewController" bundle:nil];
     UINavigationController *timelineViewControllerNav = [[UINavigationController alloc] initWithRootViewController:timelineViewController];
 
+    TweetPostViewController *tweetPostViewController = [[TweetPostViewController alloc] initWithNibName:@"TweetPostViewController" bundle:nil];
+    UINavigationController *tweetPostViewControllerNav = [[UINavigationController alloc] initWithRootViewController:tweetPostViewController];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[timelineViewControllerNav];
+    self.tabBarController.viewControllers = @[timelineViewControllerNav, tweetPostViewControllerNav];
     
     self.window.rootViewController = self.tabBarController;
     return YES;

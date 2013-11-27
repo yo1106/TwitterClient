@@ -10,10 +10,11 @@
 
 #import "TwitterClient.h"
 
+#import "TweetViewController.h"
 
 #import "TweetCell.h"
 #import "Tweet.h"
-const int requestLimit = 3;
+const int requestLimit = 10;
 
 @interface TimelineViewController ()
 
@@ -148,6 +149,18 @@ static UIRefreshControl *refreshControl;
     }
     
     return cell;
+}
+
+// セルをタップで呼ばれる
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TweetViewController *viewController = [[TweetViewController alloc] init];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+
+    TweetEntity *tweetEntity = self.tweets[indexPath.row];
+    viewController.tweetEntity = tweetEntity;
 }
 
 //最後まで来たら呼ばれる？

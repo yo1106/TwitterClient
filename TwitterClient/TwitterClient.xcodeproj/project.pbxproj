@@ -28,6 +28,23 @@
 		F6E1121F18444988001C5226 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1121E18444988001C5226 /* Tweet.m */; };
 		F6E1122318447550001C5226 /* UIAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1122218447550001C5226 /* UIAsyncImageView.m */; };
 		F6E1DAC618458D3C006874FF /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DAC518458D3C006874FF /* TwitterClient.m */; };
+		F6E1DACA1845C52C006874FF /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DAC81845C52C006874FF /* TweetViewController.m */; };
+		F6E1DACB1845C52C006874FF /* TweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DAC91845C52C006874FF /* TweetViewController.xib */; };
+		F6E1DACF1845D990006874FF /* TweetPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E1DACD1845D990006874FF /* TweetPostViewController.m */; };
+		F6E1DAD01845D990006874FF /* TweetPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DACE1845D990006874FF /* TweetPostViewController.xib */; };
+		F6E1DADE1845DD26006874FF /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DADB1845DD26006874FF /* libAviarySDK.a */; };
+		F6E1DADF1845DD26006874FF /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F6E1DADD1845DD26006874FF /* AviarySDKResources.bundle */; };
+		F6E1DAE11845DD6E006874FF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAE01845DD6E006874FF /* Accelerate.framework */; };
+		F6E1DAE31845DD7A006874FF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAE21845DD7A006874FF /* AdSupport.framework */; };
+		F6E1DAE51845DD94006874FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAE41845DD94006874FF /* CoreData.framework */; };
+		F6E1DAE71845DD9F006874FF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAE61845DD9F006874FF /* CoreText.framework */; };
+		F6E1DAE91845DDAF006874FF /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAE81845DDAF006874FF /* libsqlite3.0.dylib */; };
+		F6E1DAEB1845DDBD006874FF /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAEA1845DDBD006874FF /* libz.1.2.5.dylib */; };
+		F6E1DAED1845DDD3006874FF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAEC1845DDD3006874FF /* MessageUI.framework */; };
+		F6E1DAEF1845DDDA006874FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAEE1845DDDA006874FF /* OpenGLES.framework */; };
+		F6E1DAF11845DDE1006874FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF01845DDE1006874FF /* QuartzCore.framework */; };
+		F6E1DAF31845DDE8006874FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF21845DDE8006874FF /* StoreKit.framework */; };
+		F6E1DAF51845DDEF006874FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF41845DDEF006874FF /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +88,33 @@
 		F6E1122218447550001C5226 /* UIAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAsyncImageView.m; sourceTree = "<group>"; };
 		F6E1DAC418458D3C006874FF /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
 		F6E1DAC518458D3C006874FF /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
+		F6E1DAC71845C52C006874FF /* TweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewController.h; sourceTree = "<group>"; };
+		F6E1DAC81845C52C006874FF /* TweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewController.m; sourceTree = "<group>"; };
+		F6E1DAC91845C52C006874FF /* TweetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetViewController.xib; sourceTree = "<group>"; };
+		F6E1DACC1845D990006874FF /* TweetPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetPostViewController.h; sourceTree = "<group>"; };
+		F6E1DACD1845D990006874FF /* TweetPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetPostViewController.m; sourceTree = "<group>"; };
+		F6E1DACE1845D990006874FF /* TweetPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetPostViewController.xib; sourceTree = "<group>"; };
+		F6E1DAD31845DD26006874FF /* AFOpenGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOpenGLManager.h; sourceTree = "<group>"; };
+		F6E1DAD41845DD26006874FF /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		F6E1DAD51845DD26006874FF /* AFPhotoEditorController+InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFPhotoEditorController+InAppPurchase.h"; sourceTree = "<group>"; };
+		F6E1DAD61845DD26006874FF /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		F6E1DAD71845DD26006874FF /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		F6E1DAD81845DD26006874FF /* AFPhotoEditorCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorCustomization.h; sourceTree = "<group>"; };
+		F6E1DAD91845DD26006874FF /* AFPhotoEditorProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorProduct.h; sourceTree = "<group>"; };
+		F6E1DADA1845DD26006874FF /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		F6E1DADB1845DD26006874FF /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		F6E1DADD1845DD26006874FF /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
+		F6E1DAE01845DD6E006874FF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F6E1DAE21845DD7A006874FF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F6E1DAE41845DD94006874FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F6E1DAE61845DD9F006874FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		F6E1DAE81845DDAF006874FF /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		F6E1DAEA1845DDBD006874FF /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		F6E1DAEC1845DDD3006874FF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F6E1DAEE1845DDDA006874FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F6E1DAF01845DDE1006874FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F6E1DAF21845DDE8006874FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F6E1DAF41845DDEF006874FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +122,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E1DAF51845DDEF006874FF /* SystemConfiguration.framework in Frameworks */,
+				F6E1DAF31845DDE8006874FF /* StoreKit.framework in Frameworks */,
+				F6E1DAF11845DDE1006874FF /* QuartzCore.framework in Frameworks */,
+				F6E1DAEF1845DDDA006874FF /* OpenGLES.framework in Frameworks */,
+				F6E1DAED1845DDD3006874FF /* MessageUI.framework in Frameworks */,
+				F6E111D418442DEF001C5226 /* Foundation.framework in Frameworks */,
+				F6E1DAEB1845DDBD006874FF /* libz.1.2.5.dylib in Frameworks */,
+				F6E1DAE91845DDAF006874FF /* libsqlite3.0.dylib in Frameworks */,
+				F6E1DAE71845DD9F006874FF /* CoreText.framework in Frameworks */,
+				F6E1DAE51845DD94006874FF /* CoreData.framework in Frameworks */,
+				F6E1DAE31845DD7A006874FF /* AdSupport.framework in Frameworks */,
+				F6E1DAE11845DD6E006874FF /* Accelerate.framework in Frameworks */,
+				F6E1DADE1845DD26006874FF /* libAviarySDK.a in Frameworks */,
 				F6E1121618443FE2001C5226 /* Accounts.framework in Frameworks */,
 				F6E1121418443BF2001C5226 /* Social.framework in Frameworks */,
 				F6E111D618442DEF001C5226 /* CoreGraphics.framework in Frameworks */,
 				F6E111D818442DEF001C5226 /* UIKit.framework in Frameworks */,
-				F6E111D418442DEF001C5226 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +177,17 @@
 		F6E111D218442DEE001C5226 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6E1DAF41845DDEF006874FF /* SystemConfiguration.framework */,
+				F6E1DAF21845DDE8006874FF /* StoreKit.framework */,
+				F6E1DAF01845DDE1006874FF /* QuartzCore.framework */,
+				F6E1DAEE1845DDDA006874FF /* OpenGLES.framework */,
+				F6E1DAEC1845DDD3006874FF /* MessageUI.framework */,
+				F6E1DAEA1845DDBD006874FF /* libz.1.2.5.dylib */,
+				F6E1DAE81845DDAF006874FF /* libsqlite3.0.dylib */,
+				F6E1DAE61845DD9F006874FF /* CoreText.framework */,
+				F6E1DAE41845DD94006874FF /* CoreData.framework */,
+				F6E1DAE21845DD7A006874FF /* AdSupport.framework */,
+				F6E1DAE01845DD6E006874FF /* Accelerate.framework */,
 				F6E1121518443FE2001C5226 /* Accounts.framework */,
 				F6E1121318443BF2001C5226 /* Social.framework */,
 				F6E111D318442DEE001C5226 /* Foundation.framework */,
@@ -181,6 +248,12 @@
 				F6E1120E18443906001C5226 /* TimelineViewController.h */,
 				F6E1120F18443906001C5226 /* TimelineViewController.m */,
 				F6E1121018443906001C5226 /* TimelineViewController.xib */,
+				F6E1DAC71845C52C006874FF /* TweetViewController.h */,
+				F6E1DAC81845C52C006874FF /* TweetViewController.m */,
+				F6E1DAC91845C52C006874FF /* TweetViewController.xib */,
+				F6E1DACC1845D990006874FF /* TweetPostViewController.h */,
+				F6E1DACD1845D990006874FF /* TweetPostViewController.m */,
+				F6E1DACE1845D990006874FF /* TweetPostViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,12 +280,46 @@
 		F6E1122018447533001C5226 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				F6E1DAD11845DD26006874FF /* AviarySDK */,
 				F6E1122118447550001C5226 /* UIAsyncImageView.h */,
 				F6E1122218447550001C5226 /* UIAsyncImageView.m */,
 				F6E1DAC418458D3C006874FF /* TwitterClient.h */,
 				F6E1DAC518458D3C006874FF /* TwitterClient.m */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		F6E1DAD11845DD26006874FF /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DAD21845DD26006874FF /* Headers */,
+				F6E1DADB1845DD26006874FF /* libAviarySDK.a */,
+				F6E1DADC1845DD26006874FF /* Resources */,
+			);
+			path = AviarySDK;
+			sourceTree = "<group>";
+		};
+		F6E1DAD21845DD26006874FF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DAD31845DD26006874FF /* AFOpenGLManager.h */,
+				F6E1DAD41845DD26006874FF /* AFPhotoEditorContext.h */,
+				F6E1DAD51845DD26006874FF /* AFPhotoEditorController+InAppPurchase.h */,
+				F6E1DAD61845DD26006874FF /* AFPhotoEditorController.h */,
+				F6E1DAD71845DD26006874FF /* AFPhotoEditorControllerOptions.h */,
+				F6E1DAD81845DD26006874FF /* AFPhotoEditorCustomization.h */,
+				F6E1DAD91845DD26006874FF /* AFPhotoEditorProduct.h */,
+				F6E1DADA1845DD26006874FF /* AFPhotoEditorSession.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F6E1DADC1845DD26006874FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6E1DADD1845DD26006874FF /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +397,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E1DAD01845D990006874FF /* TweetPostViewController.xib in Resources */,
 				F6E1121B18444329001C5226 /* TweetCell.xib in Resources */,
 				F6E1121218443906001C5226 /* TimelineViewController.xib in Resources */,
 				F6E111DE18442DEF001C5226 /* InfoPlist.strings in Resources */,
+				F6E1DACB1845C52C006874FF /* TweetViewController.xib in Resources */,
+				F6E1DADF1845DD26006874FF /* AviarySDKResources.bundle in Resources */,
 				F6E111E618442DEF001C5226 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E1DACA1845C52C006874FF /* TweetViewController.m in Sources */,
 				F6E111E418442DEF001C5226 /* AppDelegate.m in Sources */,
 				F6E1121118443906001C5226 /* TimelineViewController.m in Sources */,
+				F6E1DACF1845D990006874FF /* TweetPostViewController.m in Sources */,
 				F6E111E018442DEF001C5226 /* main.m in Sources */,
 				F6E1DAC618458D3C006874FF /* TwitterClient.m in Sources */,
 				F6E1122318447550001C5226 /* UIAsyncImageView.m in Sources */,
@@ -435,12 +547,22 @@
 		F6E111FD18442DEF001C5226 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TwitterClient/TwitterClient-Prefix.pch";
 				INFOPLIST_FILE = "TwitterClient/TwitterClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yukichang/Documents/workspace/TwitterClient/TwitterClient/TwitterClient/AviarySDK,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -448,12 +570,22 @@
 		F6E111FE18442DEF001C5226 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TwitterClient/TwitterClient-Prefix.pch";
 				INFOPLIST_FILE = "TwitterClient/TwitterClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/yukichang/Documents/workspace/TwitterClient/TwitterClient/TwitterClient/AviarySDK,
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -14,9 +14,16 @@
 @interface TwitterClient : NSObject
 
 + (TwitterClient *)sharedInstance;
+
 - (void)fetchTimeline:(NSInteger)count maxId:(NSString*)maxId
               success:(void (^)(NSData *responseData,
                                 NSHTTPURLResponse *urlResponse,
                                 NSError *error))success;
+
+- (void)postTweet:(NSString*)text success:(void (^)(NSData *responseData,
+                                NSHTTPURLResponse *urlResponse,
+                                NSError *error))success;
+
+
 
 @end

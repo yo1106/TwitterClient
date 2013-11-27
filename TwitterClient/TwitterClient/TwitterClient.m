@@ -29,6 +29,30 @@ static NSString *apiBaseURL = @"https://api.twitter.com/1.1/";
     return sharedTwitterClient;
 }
 
+- (void)postTweet:(NSString*)text success:(void (^)(NSData *responseData,
+                            NSHTTPURLResponse *urlResponse,
+                            NSError *error))success{
+    //デバイスに保存されているTwitterのアカウント情報をすべて取得
+    NSArray *twitterAccounts = [store accountsWithAccountType:twitterAccountType];
+    //Twitterのアカウントが1つ以上登録されている場合
+    if ([twitterAccounts count] > 0) {
+        //0番目のアカウントを使用
+        ACAccount *account = [twitterAccounts objectAtIndex:0];
+        //認証が必要な要求に関する設定
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+        
+        [params setObject:text forKey:@"status"];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", apiBaseURL, @"statuses/update.json"]];
+        SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
+                                                requestMethod:SLRequestMethodPOST
+                                                          URL:url parameters:params];
+        //リクエストに認証情報を付加
+        [request setAccount:account];
+
+        //リクエストを発行
+        [request performRequestWithHandler:success];
+    }
+}
 
 - (void)fetchTimeline:(NSInteger)count maxId:(NSString*)maxId
             success:(void (^)(NSData *responseData,
