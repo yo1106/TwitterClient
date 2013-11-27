@@ -17,6 +17,7 @@
                                                         AFPhotoEditorControllerDelegate>
 - (void)displayEditorForImage:(UIImage *)imageToEdit;
 
+@property (strong, nonatomic) IBOutlet UIImageView *tweetImageView;
 - (IBAction)pressCameraButton:(id)sender;
 - (IBAction)pressPostButton:(id)sender;
 

@@ -39,9 +39,14 @@
 - (IBAction)pressPostButton:(id)sender
 {
     TwitterClient *client = [TwitterClient sharedInstance];
-    [client postTweet:@"test" success:^(NSData *responseData,
+    [client postTweet:@"test" image:self.tweetImageView.image success:^(NSData *responseData,
                                                         NSHTTPURLResponse *urlResponse,
                                                             NSError *error){
+        NSError *jsonError;
+        id tweets = [NSJSONSerialization JSONObjectWithData:responseData
+                                                    options: NSJSONReadingMutableLeaves error:&jsonError];
+    
+            NSLog(@"%@", tweets);
     }];
 }
 

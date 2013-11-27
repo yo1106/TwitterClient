@@ -29,7 +29,7 @@ static NSString *apiBaseURL = @"https://api.twitter.com/1.1/";
     return sharedTwitterClient;
 }
 
-- (void)postTweet:(NSString*)text success:(void (^)(NSData *responseData,
+- (void)postTweet:(NSString*)text image:(UIImage*)image success:(void (^)(NSData *responseData,
                             NSHTTPURLResponse *urlResponse,
                             NSError *error))success{
     //デバイスに保存されているTwitterのアカウント情報をすべて取得
@@ -42,13 +42,22 @@ static NSString *apiBaseURL = @"https://api.twitter.com/1.1/";
         NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
         
         [params setObject:text forKey:@"status"];
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", apiBaseURL, @"statuses/update.json"]];
+
+        NSLog(@"%@", params);
+        
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", apiBaseURL, @"statuses/update_with_media.json"]];
         SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                                 requestMethod:SLRequestMethodPOST
                                                           URL:url parameters:params];
         //リクエストに認証情報を付加
         [request setAccount:account];
+        if(image){
+            NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
 
+            [request addMultipartData:imageData withName:@"media" type:@"image/jpeg" filename:nil];
+        }
+        
+        
         //リクエストを発行
         [request performRequestWithHandler:success];
     }
