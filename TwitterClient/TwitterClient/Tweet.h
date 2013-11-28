@@ -8,14 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserEntity : NSObject
-
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *screenName;
-@property (nonatomic, strong) NSString *profileImageURL;
--(void)setEntity:(NSDictionary*)dict;
-
-@end
+#import "User.h"
 
 @interface TweetEntity : NSObject
 

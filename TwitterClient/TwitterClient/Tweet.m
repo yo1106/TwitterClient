@@ -8,15 +8,6 @@
 
 #import "Tweet.h"
 
-@implementation UserEntity
-
--(void)setEntity:(NSDictionary*)dict{
-    self.profileImageURL = dict[@"profile_image_url"];
-    self.name = dict[@"name"];
-    self.screenName = dict[@"screen_name"];
-}
-
-@end
 
 @implementation TweetEntity
 

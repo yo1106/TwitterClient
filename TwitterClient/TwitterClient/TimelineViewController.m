@@ -139,7 +139,7 @@ static UIRefreshControl *refreshControl;
     if([self.tweets count] > indexPath.row){
 
         TweetEntity *tweetEntity = self.tweets[indexPath.row];
-        [self.tweetCell setEntity:cell tweetEntity:tweetEntity];
+        cell.tweetEntity = tweetEntity;
     }
 
     if([self.tweets count] < indexPath.row+3){

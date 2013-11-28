@@ -19,7 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tweetCreated;
 
+@property (nonatomic, strong) TweetEntity *tweetEntity;
+
 -(CGFloat)calculateCellHeightWithText:(NSString *)text;
-- (void)setEntity:(TweetCell*)cell tweetEntity:(TweetEntity*)tweetEntity;
 
 @end

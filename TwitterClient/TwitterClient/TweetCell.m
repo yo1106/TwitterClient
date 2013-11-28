@@ -16,9 +16,33 @@
     if (self) {
         // Initialization code
     }
+    
     return self;
 }
 
+- (void)layoutSubviews
+{
+    
+    [super layoutSubviews];
+
+    self.tweetUserNameLabel.text = self.tweetEntity.userEntity.name;
+    
+    self.tweetTextLabel.text = self.tweetEntity.text;
+    self.tweetTextLabel.numberOfLines = 0;
+    
+    // こいつを書いておかないと、labelの横幅が勝手に変わってしまってデザインが崩れる。
+    CGRect frame = self.tweetTextLabel.frame;
+    [self.tweetTextLabel sizeToFit];
+    frame.size.height = self.tweetTextLabel.frame.size.height;
+    self.tweetTextLabel.frame = frame;
+    
+    
+    //    cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
+    self.tweetCreated.text = self.tweetEntity.created_at;
+    NSString *imageURL = self.tweetEntity.userEntity.profileImageURL;
+    [self.tweetUserAvatarImageView loadImage:imageURL];
+    self.tweetUserAvatarImageView.tag = [self.tweetEntity.userEntity.twitterId intValue];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -26,23 +50,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setEntity:(TweetCell*)cell tweetEntity:(TweetEntity*)tweetEntity
-{
-    cell.tweetTextLabel.text = tweetEntity.text;
-    cell.tweetTextLabel.numberOfLines = 0;
-    
-    // こいつを書いておかないと、labelの横幅が勝手に変わってしまってデザインが崩れる。
-    CGRect frame = cell.tweetTextLabel.frame;
-    [cell.tweetTextLabel sizeToFit];
-    frame.size.height = cell.tweetTextLabel.frame.size.height;
-    cell.tweetTextLabel.frame = frame;
-    
-    
-    cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
-    cell.tweetCreated.text = tweetEntity.created_at;
-    NSString *imageURL = tweetEntity.userEntity.profileImageURL;
-    [cell.tweetUserAvatarImageView loadImage:imageURL];
-}
+
 
 -(CGFloat)calculateCellHeightWithText:(NSString *)text
 {

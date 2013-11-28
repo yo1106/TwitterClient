@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F62CD624184747F5000E0708 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62CD622184747F5000E0708 /* UserViewController.m */; };
+		F62CD625184747F5000E0708 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62CD623184747F5000E0708 /* UserViewController.xib */; };
+		F62CD62818474ACC000E0708 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F62CD62718474ACC000E0708 /* User.m */; };
 		F6E111D418442DEF001C5226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E111D318442DEE001C5226 /* Foundation.framework */; };
 		F6E111D618442DEF001C5226 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E111D518442DEF001C5226 /* CoreGraphics.framework */; };
 		F6E111D818442DEF001C5226 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E111D718442DEF001C5226 /* UIKit.framework */; };
@@ -58,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F62CD621184747F5000E0708 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		F62CD622184747F5000E0708 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		F62CD623184747F5000E0708 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		F62CD62618474ACC000E0708 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F62CD62718474ACC000E0708 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F6E111D018442DEE001C5226 /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E111D318442DEE001C5226 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6E111D518442DEF001C5226 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -254,6 +262,9 @@
 				F6E1DACC1845D990006874FF /* TweetPostViewController.h */,
 				F6E1DACD1845D990006874FF /* TweetPostViewController.m */,
 				F6E1DACE1845D990006874FF /* TweetPostViewController.xib */,
+				F62CD621184747F5000E0708 /* UserViewController.h */,
+				F62CD622184747F5000E0708 /* UserViewController.m */,
+				F62CD623184747F5000E0708 /* UserViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +282,8 @@
 		F6E1121C1844491E001C5226 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F62CD62618474ACC000E0708 /* User.h */,
+				F62CD62718474ACC000E0708 /* User.m */,
 				F6E1121D18444988001C5226 /* Tweet.h */,
 				F6E1121E18444988001C5226 /* Tweet.m */,
 			);
@@ -402,6 +415,7 @@
 				F6E1121218443906001C5226 /* TimelineViewController.xib in Resources */,
 				F6E111DE18442DEF001C5226 /* InfoPlist.strings in Resources */,
 				F6E1DACB1845C52C006874FF /* TweetViewController.xib in Resources */,
+				F62CD625184747F5000E0708 /* UserViewController.xib in Resources */,
 				F6E1DADF1845DD26006874FF /* AviarySDKResources.bundle in Resources */,
 				F6E111E618442DEF001C5226 /* Images.xcassets in Resources */,
 			);
@@ -423,10 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E1DACA1845C52C006874FF /* TweetViewController.m in Sources */,
+				F62CD624184747F5000E0708 /* UserViewController.m in Sources */,
 				F6E111E418442DEF001C5226 /* AppDelegate.m in Sources */,
 				F6E1121118443906001C5226 /* TimelineViewController.m in Sources */,
 				F6E1DACF1845D990006874FF /* TweetPostViewController.m in Sources */,
 				F6E111E018442DEF001C5226 /* main.m in Sources */,
+				F62CD62818474ACC000E0708 /* User.m in Sources */,
 				F6E1DAC618458D3C006874FF /* TwitterClient.m in Sources */,
 				F6E1122318447550001C5226 /* UIAsyncImageView.m in Sources */,
 				F6E1121F18444988001C5226 /* Tweet.m in Sources */,
