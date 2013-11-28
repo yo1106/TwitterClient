@@ -81,8 +81,6 @@ static UIRefreshControl *refreshControl;
     // Do any additional setup after loading the view from its nib.
 
     self.tweets = [[NSMutableArray alloc] init];
-
-    
     self.title = @"タイムライン";
 
     self.tableView.dataSource = self;

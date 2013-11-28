@@ -39,15 +39,35 @@
 - (IBAction)pressPostButton:(id)sender
 {
     TwitterClient *client = [TwitterClient sharedInstance];
-    [client postTweet:@"test" image:self.tweetImageView.image success:^(NSData *responseData,
-                                                        NSHTTPURLResponse *urlResponse,
-                                                            NSError *error){
-        NSError *jsonError;
-        id tweets = [NSJSONSerialization JSONObjectWithData:responseData
-                                                    options: NSJSONReadingMutableLeaves error:&jsonError];
     
+    //画像がImageVIEWにセットされている場合
+    if(self.tweetImageView.image){
+        
+        [client postImageTweet:self.TweetTextView.text image:self.tweetImageView.image success:^(NSData *responseData,
+                                                                                                 NSHTTPURLResponse *urlResponse,
+                                                                                                 NSError *error){
+            NSError *jsonError;
+            id tweets = [NSJSONSerialization JSONObjectWithData:responseData
+                                                        options: NSJSONReadingMutableLeaves error:&jsonError];
+            
             NSLog(@"%@", tweets);
-    }];
+        }];
+        
+    }else{
+
+        [client postTweet:self.TweetTextView.text success:^(NSData *responseData,
+                                                             NSHTTPURLResponse *urlResponse,
+                                                             NSError *error){
+            NSError *jsonError;
+            id tweets = [NSJSONSerialization JSONObjectWithData:responseData
+                                                        options: NSJSONReadingMutableLeaves error:&jsonError];
+            
+            NSLog(@"%@", tweets);
+        }];
+        
+        
+    }
+
 }
 
 - (void)displayEditorForImage:(UIImage *)imageToEdit

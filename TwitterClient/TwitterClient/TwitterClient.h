@@ -20,10 +20,13 @@
                                 NSHTTPURLResponse *urlResponse,
                                 NSError *error))success;
 
-- (void)postTweet:(NSString*)text image:(UIImage*)image success:(void (^)(NSData *responseData,
+- (void)postImageTweet:(NSString*)text image:(UIImage*)image success:(void (^)(NSData *responseData,
                                 NSHTTPURLResponse *urlResponse,
                                 NSError *error))success;
 
+- (void)postTweet:(NSString*)text success:(void (^)(NSData *responseData,
+                                                   NSHTTPURLResponse *urlResponse,
+                                                   NSError *error))success;
 
 
 @end

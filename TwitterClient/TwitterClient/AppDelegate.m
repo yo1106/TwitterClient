@@ -20,10 +20,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     
     TimelineViewController *timelineViewController = [[TimelineViewController alloc] initWithNibName:@"TimelineViewController" bundle:nil];
     UINavigationController *timelineViewControllerNav = [[UINavigationController alloc] initWithRootViewController:timelineViewController];
-
+    
+    
     TweetPostViewController *tweetPostViewController = [[TweetPostViewController alloc] initWithNibName:@"TweetPostViewController" bundle:nil];
     UINavigationController *tweetPostViewControllerNav = [[UINavigationController alloc] initWithRootViewController:tweetPostViewController];
     
@@ -33,6 +35,8 @@
     self.window.rootViewController = self.tabBarController;
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
