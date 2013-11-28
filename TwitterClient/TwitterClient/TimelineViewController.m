@@ -11,6 +11,8 @@
 #import "TwitterClient.h"
 
 #import "TweetViewController.h"
+#import "UserViewController.h"
+
 
 #import "TweetCell.h"
 #import "Tweet.h"
@@ -140,6 +142,7 @@ static UIRefreshControl *refreshControl;
 
         TweetEntity *tweetEntity = self.tweets[indexPath.row];
         cell.tweetEntity = tweetEntity;
+        cell.avatarImageViewPressed = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushUserVC)];
     }
 
     if([self.tweets count] < indexPath.row+3){
@@ -149,9 +152,20 @@ static UIRefreshControl *refreshControl;
     return cell;
 }
 
+
+
+- (void)pushUserVC
+{
+    NSLog(@"pushUserVC");
+    UserViewController *viewController = [[UserViewController alloc] init];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 // セルをタップで呼ばれる
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"didSelectRowAtIndexPath");
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TweetViewController *viewController = [[TweetViewController alloc] init];
     

@@ -19,7 +19,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tweetCreated;
 
+//@property (strong, nonatomic) void(^avatarImageViewPressed)();
+@property (nonatomic, strong) UITapGestureRecognizer *avatarImageViewPressed;
+
+
 @property (nonatomic, strong) TweetEntity *tweetEntity;
+
+- (IBAction)pressAvatarImageView:(id)sender;
+
 
 -(CGFloat)calculateCellHeightWithText:(NSString *)text;
 

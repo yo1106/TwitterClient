@@ -42,6 +42,11 @@
     NSString *imageURL = self.tweetEntity.userEntity.profileImageURL;
     [self.tweetUserAvatarImageView loadImage:imageURL];
     self.tweetUserAvatarImageView.tag = [self.tweetEntity.userEntity.twitterId intValue];
+
+
+    if(self.avatarImageViewPressed){
+        [self.tweetUserAvatarImageView addGestureRecognizer:self.avatarImageViewPressed];
+    }
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -50,7 +55,9 @@
     // Configure the view for the selected state
 }
 
-
+- (IBAction)pressAvatarImageView:(id)sender{
+    [self avatarImageViewPressed];
+}
 
 -(CGFloat)calculateCellHeightWithText:(NSString *)text
 {
