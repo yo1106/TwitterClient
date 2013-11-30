@@ -45,7 +45,7 @@
 
 
     if(self.avatarImageViewPressed){
-        [self.tweetUserAvatarImageView addGestureRecognizer:self.avatarImageViewPressed];
+        self.tweetUserAvatarImageView.imageViewPressedBlock = self.avatarImageViewPressed;
     }
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -55,19 +55,9 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)pressAvatarImageView:(id)sender{
-    [self avatarImageViewPressed];
-}
 
 -(CGFloat)calculateCellHeightWithText:(NSString *)text
 {
-    // TODO : UILabel の高さ計算 [2]
-    // HINT : (CGSize)sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode
-    
-    //表示最大サイズ
-//    CGSize bounds = CGSizeMake(self.tweetTextLabel.frame.size.width, CGFLOAT_MAX);
-//    NSLineBreakMode mode = self.tweetTextLabel.lineBreakMode;//改行する
-//    CGSize size = [text sizeWithFont:self.tweetTextLabel.font constrainedToSize:bounds lineBreakMode:mode];
     NSAttributedString *attributedText =
     [[NSAttributedString alloc]
      initWithString:text

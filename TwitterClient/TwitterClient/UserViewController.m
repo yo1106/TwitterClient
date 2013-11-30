@@ -2,7 +2,7 @@
 //  UserViewController.m
 //  TwitterClient
 //
-//  Created by yukichang on 2013/11/28.
+//  Created by yukichang on 2013/11/29.
 //  Copyright (c) 2013年 yukichang. All rights reserved.
 //
 
@@ -26,18 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    [self setUp];
-}
-
-- (void)setUp
-{
-
-    self.userName.text = self.userEntity.name;
-    
-    self.userScreenName.text = self.userEntity.screenName;
-    
+	// Do any additional setup after loading the view.
+    UserSubview *view = [[UserSubview alloc] init];
+    view.userEntity = self.userEntity;
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning

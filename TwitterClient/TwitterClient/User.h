@@ -14,6 +14,9 @@
 @property (nonatomic, strong) NSString *twitterId;
 @property (nonatomic, strong) NSString *screenName;
 @property (nonatomic, strong) NSString *profileImageURL;
+@property (nonatomic, strong) NSString *profileBackgroundImageURL;
+@property (nonatomic, strong) NSString *followersCount;
+@property (nonatomic, strong) NSString *followingCount;
 -(void)setEntity:(NSDictionary*)dict;
 
 @end

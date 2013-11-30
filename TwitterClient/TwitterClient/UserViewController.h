@@ -2,7 +2,7 @@
 //  UserViewController.h
 //  TwitterClient
 //
-//  Created by yukichang on 2013/11/28.
+//  Created by yukichang on 2013/11/29.
 //  Copyright (c) 2013年 yukichang. All rights reserved.
 //
 
@@ -10,14 +10,12 @@
 
 #import "User.h"
 
+#import "UserSubview.h"
+
+
 @interface UserViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIImageView *userAvatarImage;
-@property (strong, nonatomic) IBOutlet UIImageView *userCoverImage;
-@property (strong, nonatomic) IBOutlet UILabel *userName;
-@property (strong, nonatomic) IBOutlet UILabel *userScreenName;
-
-@property (nonatomic, strong) UserEntity *userEntity;
+@property (strong, nonatomic) UserEntity *userEntity;
 
 
 @end

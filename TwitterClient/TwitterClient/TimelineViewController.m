@@ -11,7 +11,6 @@
 #import "TwitterClient.h"
 
 #import "TweetViewController.h"
-#import "UserViewController.h"
 
 
 #import "TweetCell.h"
@@ -142,7 +141,14 @@ static UIRefreshControl *refreshControl;
 
         TweetEntity *tweetEntity = self.tweets[indexPath.row];
         cell.tweetEntity = tweetEntity;
-        cell.avatarImageViewPressed = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushUserVC)];
+        
+        cell.avatarImageViewPressed = ^(void){
+            
+            UserViewController *viewController = [[UserViewController alloc] initWithNibName:nil bundle:nil];
+            viewController.userEntity = tweetEntity.userEntity;
+            [self.navigationController pushViewController:viewController animated:YES];
+            
+        };
     }
 
     if([self.tweets count] < indexPath.row+3){
@@ -154,26 +160,18 @@ static UIRefreshControl *refreshControl;
 
 
 
-- (void)pushUserVC
-{
-    NSLog(@"pushUserVC");
-    UserViewController *viewController = [[UserViewController alloc] init];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
 // セルをタップで呼ばれる
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"didSelectRowAtIndexPath");
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    TweetViewController *viewController = [[TweetViewController alloc] init];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
-
-    TweetEntity *tweetEntity = self.tweets[indexPath.row];
-    viewController.tweetEntity = tweetEntity;
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"didSelectRowAtIndexPath");
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    TweetViewController *viewController = [[TweetViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:viewController animated:YES];
+//
+//    TweetEntity *tweetEntity = self.tweets[indexPath.row];
+//    viewController.tweetEntity = tweetEntity;
+//}
 
 //最後まで来たら呼ばれる？
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

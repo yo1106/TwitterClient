@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F62CD624184747F5000E0708 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62CD622184747F5000E0708 /* UserViewController.m */; };
-		F62CD625184747F5000E0708 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62CD623184747F5000E0708 /* UserViewController.xib */; };
 		F62CD62818474ACC000E0708 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F62CD62718474ACC000E0708 /* User.m */; };
+		F6DAF27518488FAB0042B59F /* UIImageView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DAF27418488FAB0042B59F /* UIImageView+Action.m */; };
+		F6DAF278184890DE0042B59F /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DAF277184890DE0042B59F /* UserViewController.m */; };
+		F6DAF27B184894D20042B59F /* UserSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DAF27A184894D20042B59F /* UserSubview.m */; };
 		F6E111D418442DEF001C5226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E111D318442DEE001C5226 /* Foundation.framework */; };
 		F6E111D618442DEF001C5226 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E111D518442DEF001C5226 /* CoreGraphics.framework */; };
 		F6E111D818442DEF001C5226 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E111D718442DEF001C5226 /* UIKit.framework */; };
@@ -48,6 +49,7 @@
 		F6E1DAF11845DDE1006874FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF01845DDE1006874FF /* QuartzCore.framework */; };
 		F6E1DAF31845DDE8006874FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF21845DDE8006874FF /* StoreKit.framework */; };
 		F6E1DAF51845DDEF006874FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF41845DDEF006874FF /* SystemConfiguration.framework */; };
+		F6E3ACD318489A3B007DA3F8 /* UserSubview.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E3ACD218489A3B007DA3F8 /* UserSubview.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +63,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F62CD621184747F5000E0708 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
-		F62CD622184747F5000E0708 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
-		F62CD623184747F5000E0708 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		F62CD62618474ACC000E0708 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F62CD62718474ACC000E0708 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F6DAF27318488FAB0042B59F /* UIImageView+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Action.h"; sourceTree = "<group>"; };
+		F6DAF27418488FAB0042B59F /* UIImageView+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Action.m"; sourceTree = "<group>"; };
+		F6DAF276184890DE0042B59F /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		F6DAF277184890DE0042B59F /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		F6DAF279184894D20042B59F /* UserSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSubview.h; sourceTree = "<group>"; };
+		F6DAF27A184894D20042B59F /* UserSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSubview.m; sourceTree = "<group>"; };
 		F6E111D018442DEE001C5226 /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E111D318442DEE001C5226 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6E111D518442DEF001C5226 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +128,7 @@
 		F6E1DAF01845DDE1006874FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F6E1DAF21845DDE8006874FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F6E1DAF41845DDEF006874FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F6E3ACD218489A3B007DA3F8 /* UserSubview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSubview.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,9 +268,8 @@
 				F6E1DACC1845D990006874FF /* TweetPostViewController.h */,
 				F6E1DACD1845D990006874FF /* TweetPostViewController.m */,
 				F6E1DACE1845D990006874FF /* TweetPostViewController.xib */,
-				F62CD621184747F5000E0708 /* UserViewController.h */,
-				F62CD622184747F5000E0708 /* UserViewController.m */,
-				F62CD623184747F5000E0708 /* UserViewController.xib */,
+				F6DAF276184890DE0042B59F /* UserViewController.h */,
+				F6DAF277184890DE0042B59F /* UserViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +280,9 @@
 				F6E1121718444309001C5226 /* TweetCell.h */,
 				F6E1121818444309001C5226 /* TweetCell.m */,
 				F6E1121A18444329001C5226 /* TweetCell.xib */,
+				F6DAF279184894D20042B59F /* UserSubview.h */,
+				F6DAF27A184894D20042B59F /* UserSubview.m */,
+				F6E3ACD218489A3B007DA3F8 /* UserSubview.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -298,6 +306,8 @@
 				F6E1122218447550001C5226 /* UIAsyncImageView.m */,
 				F6E1DAC418458D3C006874FF /* TwitterClient.h */,
 				F6E1DAC518458D3C006874FF /* TwitterClient.m */,
+				F6DAF27318488FAB0042B59F /* UIImageView+Action.h */,
+				F6DAF27418488FAB0042B59F /* UIImageView+Action.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -415,9 +425,9 @@
 				F6E1121218443906001C5226 /* TimelineViewController.xib in Resources */,
 				F6E111DE18442DEF001C5226 /* InfoPlist.strings in Resources */,
 				F6E1DACB1845C52C006874FF /* TweetViewController.xib in Resources */,
-				F62CD625184747F5000E0708 /* UserViewController.xib in Resources */,
 				F6E1DADF1845DD26006874FF /* AviarySDKResources.bundle in Resources */,
 				F6E111E618442DEF001C5226 /* Images.xcassets in Resources */,
+				F6E3ACD318489A3B007DA3F8 /* UserSubview.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +447,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E1DACA1845C52C006874FF /* TweetViewController.m in Sources */,
-				F62CD624184747F5000E0708 /* UserViewController.m in Sources */,
+				F6DAF27B184894D20042B59F /* UserSubview.m in Sources */,
 				F6E111E418442DEF001C5226 /* AppDelegate.m in Sources */,
 				F6E1121118443906001C5226 /* TimelineViewController.m in Sources */,
+				F6DAF27518488FAB0042B59F /* UIImageView+Action.m in Sources */,
 				F6E1DACF1845D990006874FF /* TweetPostViewController.m in Sources */,
 				F6E111E018442DEF001C5226 /* main.m in Sources */,
 				F62CD62818474ACC000E0708 /* User.m in Sources */,
 				F6E1DAC618458D3C006874FF /* TwitterClient.m in Sources */,
 				F6E1122318447550001C5226 /* UIAsyncImageView.m in Sources */,
+				F6DAF278184890DE0042B59F /* UserViewController.m in Sources */,
 				F6E1121F18444988001C5226 /* Tweet.m in Sources */,
 				F6E1121918444309001C5226 /* TweetCell.m in Sources */,
 			);

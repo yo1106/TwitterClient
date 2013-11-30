@@ -10,6 +10,7 @@
 
 #import "Tweet.h"
 
+#import "UIImageView+Action.h"
 #import "UIAsyncImageView.h"
 
 @interface TweetCell : UITableViewCell
@@ -19,13 +20,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tweetCreated;
 
-//@property (strong, nonatomic) void(^avatarImageViewPressed)();
-@property (nonatomic, strong) UITapGestureRecognizer *avatarImageViewPressed;
+@property (strong, nonatomic) void(^avatarImageViewPressed)();
 
 
 @property (nonatomic, strong) TweetEntity *tweetEntity;
-
-- (IBAction)pressAvatarImageView:(id)sender;
 
 
 -(CGFloat)calculateCellHeightWithText:(NSString *)text;

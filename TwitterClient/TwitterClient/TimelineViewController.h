@@ -10,9 +10,9 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 
+#import "UserViewController.h"
 
-@interface TimelineViewController : UIViewController<UITableViewDelegate, UITableViewDataSource
->
+@interface TimelineViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *tweets;
 @property (nonatomic, strong) NSString *lastTweetId;
