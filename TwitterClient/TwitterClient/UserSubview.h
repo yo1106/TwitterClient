@@ -10,6 +10,8 @@
 #import "User.h"
 #import "UIAsyncImageView.h"
 
+#import "FollowingViewController.h"
+
 @interface UserSubview : UIView
 
 @property (strong, nonatomic) UserEntity *userEntity;
@@ -22,5 +24,9 @@
 
 @property (strong, nonatomic) IBOutlet UIAsyncImageView *userCoverImageView;
 @property (strong, nonatomic) IBOutlet UIAsyncImageView *userAvatarImageView;
+
+@property (strong, nonatomic) void(^followingCountButtonPressed)();
+
+- (IBAction)pressFollowingButton:(id)sender;
 
 @end

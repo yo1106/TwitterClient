@@ -144,9 +144,9 @@ static UIRefreshControl *refreshControl;
         
         cell.avatarImageViewPressed = ^(void){
             
-            UserViewController *viewController = [[UserViewController alloc] initWithNibName:nil bundle:nil];
-            viewController.userEntity = tweetEntity.userEntity;
-            [self.navigationController pushViewController:viewController animated:YES];
+            UserViewController *vc = [[UserViewController alloc] initWithNibName:nil bundle:nil];
+            vc.userEntity = tweetEntity.userEntity;
+            [self.navigationController pushViewController:vc animated:YES];
             
         };
     }

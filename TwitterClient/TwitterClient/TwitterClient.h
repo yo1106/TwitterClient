@@ -24,6 +24,11 @@
                                                              NSHTTPURLResponse *urlResponse,
                                                              NSError *error))success;
 
+- (void)fetchFriendsList:(NSString*)screenName count:(NSInteger)count cursor:(NSString*)cursor
+                 success:(void (^)(NSData *responseData,
+                                   NSHTTPURLResponse *urlResponse,
+                                   NSError *error))success;
+
 - (void)postImageTweet:(NSString*)text image:(UIImage*)image success:(void (^)(NSData *responseData,
                                 NSHTTPURLResponse *urlResponse,
                                 NSError *error))success;

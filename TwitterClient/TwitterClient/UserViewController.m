@@ -29,6 +29,12 @@
 	// Do any additional setup after loading the view.
     UserSubview *view = [[UserSubview alloc] init];
     view.userEntity = self.userEntity;
+    
+    view.followingCountButtonPressed = ^(void){
+        FollowingViewController *vc = [[FollowingViewController alloc] initWithNibName:nil bundle:nil];
+        vc.owner = self.userEntity;
+        [self.navigationController pushViewController:vc animated:YES];
+    };
     self.view = view;
 }
 
