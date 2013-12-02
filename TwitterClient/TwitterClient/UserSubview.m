@@ -47,6 +47,8 @@
     [self.followerCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.followersCount] forState:UIControlStateNormal];
     
     [self.followingCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.followingCount] forState:UIControlStateNormal];
+
+    [self.tweetCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.tweetsCount] forState:UIControlStateNormal];
 //    [self.followerCount setTitle:self.userEntity.followersCount forState:self.followerCount.state];
 }
 

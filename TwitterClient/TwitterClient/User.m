@@ -16,9 +16,11 @@
     self.profileBackgroundImageURL = dict[@"profile_background_image_url"];
     self.followersCount = dict[@"followers_count"];
     self.followingCount = dict[@"friends_count"];
+    self.tweetsCount = dict[@"statuses_count"];
     self.name = dict[@"name"];
     self.twitterId = dict[@"id"];
     self.screenName = dict[@"screen_name"];
+    
     NSLog(@"User:%@", dict);
 }
 
