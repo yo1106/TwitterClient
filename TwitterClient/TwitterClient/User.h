@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TwitterClient.h"
+
 @interface UserEntity : NSObject
 
 @property (nonatomic, strong) NSString *name;
@@ -15,8 +17,10 @@
 @property (nonatomic, strong) NSString *screenName;
 @property (nonatomic, strong) NSString *profileImageURL;
 @property (nonatomic, strong) NSString *profileBackgroundImageURL;
+@property (nonatomic, strong) NSString *profileBannerURL;
 @property (nonatomic, strong) NSString *followersCount;
 @property (nonatomic, strong) NSString *followingCount;
+@property (nonatomic, strong) NSString *tweetsCount;
 -(void)setEntity:(NSDictionary*)dict;
 
 @end

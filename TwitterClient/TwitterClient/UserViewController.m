@@ -29,8 +29,9 @@
 	// Do any additional setup after loading the view.
     UserSubview *view = [[UserSubview alloc] init];
     view.userEntity = self.userEntity;
-    [self.view addSubview:view];
+    self.view = view;
 }
+
 
 - (void)didReceiveMemoryWarning
 {

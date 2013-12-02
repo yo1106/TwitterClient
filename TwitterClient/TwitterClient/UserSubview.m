@@ -40,9 +40,13 @@
     self.userNameLabel.text = self.userEntity.name;
     self.userScreenName.text = self.userEntity.screenName;
     [self.userAvatarImageView loadImage:self.userEntity.profileImageURL];
+    [self.userCoverImageView loadImage:self.userEntity.profileBannerURL];
+
     NSLog(@"%@", self.userEntity.followingCount);
+  
     [self.followerCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.followersCount] forState:UIControlStateNormal];
-//    [self.followingCount setTitle:self.userEntity.followingCount forState:self.followingCount.state];
+    
+    [self.followingCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.followingCount] forState:UIControlStateNormal];
 //    [self.followerCount setTitle:self.userEntity.followersCount forState:self.followerCount.state];
 }
 

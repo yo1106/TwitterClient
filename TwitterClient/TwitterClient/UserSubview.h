@@ -20,8 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *followingCount;
 @property (strong, nonatomic) IBOutlet UIButton *followerCount;
 
-
-
+@property (strong, nonatomic) IBOutlet UIAsyncImageView *userCoverImageView;
 @property (strong, nonatomic) IBOutlet UIAsyncImageView *userAvatarImageView;
 
 @end

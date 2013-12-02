@@ -20,6 +20,10 @@
                                 NSHTTPURLResponse *urlResponse,
                                 NSError *error))success;
 
+- (void)fetchUsersLookup:(NSString*)screenName success:(void (^)(NSData *responseData,
+                                                             NSHTTPURLResponse *urlResponse,
+                                                             NSError *error))success;
+
 - (void)postImageTweet:(NSString*)text image:(UIImage*)image success:(void (^)(NSData *responseData,
                                 NSHTTPURLResponse *urlResponse,
                                 NSError *error))success;
@@ -27,6 +31,7 @@
 - (void)postTweet:(NSString*)text success:(void (^)(NSData *responseData,
                                                    NSHTTPURLResponse *urlResponse,
                                                    NSError *error))success;
+
 
 
 @end

@@ -22,4 +22,32 @@
     NSLog(@"User:%@", dict);
 }
 
+-(void)fetchLookup{
+    TwitterClient *client = [TwitterClient sharedInstance];
+    [client fetchUsersLookup:self.screenName success:^(NSData *responseData,
+                                                        NSHTTPURLResponse *urlResponse,
+                                                        NSError *error){
+        NSError *jsonError;
+        id tweets = [NSJSONSerialization JSONObjectWithData:responseData
+                                                    options: NSJSONReadingMutableLeaves error:&jsonError];
+        
+        NSLog(@"%@", tweets);
+        if([NSStringFromClass([tweets class]) isEqual: @"__NSCFDictionary"]){
+            NSLog(@"%@", tweets);
+        }else{
+            self.profileBannerURL = [NSString stringWithFormat:@"%@/%@", tweets[0][@"profile_banner_url"], @"mobile_retina"];
+        }
+        
+    }];
+}
+
+-(NSString*)profileBannerURL{
+    if(!_profileBannerURL){
+        [self fetchLookup];
+    }
+    NSLog(@"profileBannerURL:%@", _profileBannerURL);
+
+    return _profileBannerURL;
+}
+
 @end
