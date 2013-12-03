@@ -16,6 +16,10 @@
     self.created_at = dict[@"created_at"];
     self.tweetId = dict[@"id"];
     
+    if([[dict[@"entities"] allKeys] containsObject:@"media"]){
+        self.mediaURL = dict[@"entities"][@"media"][0][@"media_url"];
+    }
+    
     UserEntity *userEntity = [[UserEntity alloc] init];
     [userEntity setEntity:dict[@"user"]];
     self.userEntity = userEntity;

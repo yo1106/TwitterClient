@@ -43,10 +43,14 @@
     [self.tweetUserAvatarImageView loadImage:imageURL];
     self.tweetUserAvatarImageView.tag = [self.tweetEntity.userEntity.twitterId intValue];
 
+    if(self.tweetEntity.mediaURL){
+        [self.mediaImageView loadImage:self.tweetEntity.mediaURL];
+    }
 
     if(self.avatarImageViewPressed){
         self.tweetUserAvatarImageView.imageViewPressedBlock = self.avatarImageViewPressed;
     }
+
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

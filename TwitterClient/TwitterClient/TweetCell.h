@@ -16,6 +16,7 @@
 @interface TweetCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIAsyncImageView *tweetUserAvatarImageView;
+@property (strong, nonatomic) IBOutlet UIAsyncImageView *mediaImageView;
 @property (weak, nonatomic) IBOutlet UILabel *tweetUserNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tweetCreated;
