@@ -69,7 +69,6 @@ static UIRefreshControl *refreshControl;
         }
         
         [self refreshTableOnFront];
-        NSLog(@"response:%@", response);
     }];
 }
 

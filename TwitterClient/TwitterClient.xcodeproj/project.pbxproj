@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F62CD62818474ACC000E0708 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F62CD62718474ACC000E0708 /* User.m */; };
+		F6751149184D7988002940CD /* carrypamyupamyu_a01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6751148184D7988002940CD /* carrypamyupamyu_a01.jpg */; };
+		F675114B184D839C002940CD /* TweetImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F675114A184D839C002940CD /* TweetImageCell.xib */; };
 		F6984D6B184C36F500DAE454 /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6984D6A184C36F500DAE454 /* FollowingViewController.m */; };
 		F6984D6E184C4D9700DAE454 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6984D6D184C4D9700DAE454 /* UserCell.m */; };
 		F6984D70184C4DD400DAE454 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6984D6F184C4DD400DAE454 /* UserCell.xib */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		F62CD62618474ACC000E0708 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F62CD62718474ACC000E0708 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F6751148184D7988002940CD /* carrypamyupamyu_a01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrypamyupamyu_a01.jpg; sourceTree = "<group>"; };
+		F675114A184D839C002940CD /* TweetImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetImageCell.xib; sourceTree = "<group>"; };
 		F6984D69184C36F500DAE454 /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
 		F6984D6A184C36F500DAE454 /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		F6984D6C184C4D9700DAE454 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -290,12 +294,14 @@
 				F6E1121718444309001C5226 /* TweetCell.h */,
 				F6E1121818444309001C5226 /* TweetCell.m */,
 				F6E1121A18444329001C5226 /* TweetCell.xib */,
+				F675114A184D839C002940CD /* TweetImageCell.xib */,
 				F6984D6C184C4D9700DAE454 /* UserCell.h */,
 				F6984D6D184C4D9700DAE454 /* UserCell.m */,
 				F6984D6F184C4DD400DAE454 /* UserCell.xib */,
 				F6DAF279184894D20042B59F /* UserSubview.h */,
 				F6DAF27A184894D20042B59F /* UserSubview.m */,
 				F6E3ACD218489A3B007DA3F8 /* UserSubview.xib */,
+				F6751148184D7988002940CD /* carrypamyupamyu_a01.jpg */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -441,6 +447,8 @@
 				F6984D70184C4DD400DAE454 /* UserCell.xib in Resources */,
 				F6E1DADF1845DD26006874FF /* AviarySDKResources.bundle in Resources */,
 				F6E111E618442DEF001C5226 /* Images.xcassets in Resources */,
+				F675114B184D839C002940CD /* TweetImageCell.xib in Resources */,
+				F6751149184D7988002940CD /* carrypamyupamyu_a01.jpg in Resources */,
 				F6E3ACD318489A3B007DA3F8 /* UserSubview.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

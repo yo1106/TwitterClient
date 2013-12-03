@@ -36,7 +36,6 @@
         [self.navigationController pushViewController:vc animated:YES];
     };
     view.avatarImageViewPressed = ^(void){
-        NSLog(@"press!");
     };
     self.view = view;
 }

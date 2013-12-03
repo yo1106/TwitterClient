@@ -53,7 +53,6 @@ static ACAccount *account = nil;
             //リクエストを発行
             [request performRequestWithHandler:success];
         }else{
-            NSLog(@"accountがないよー");
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                             message:@"有効なTwitterアカウントがありません"
                                                             delegate:self

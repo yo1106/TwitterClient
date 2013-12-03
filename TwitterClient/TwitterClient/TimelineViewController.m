@@ -15,7 +15,7 @@
 
 #import "TweetCell.h"
 #import "Tweet.h"
-const int requestLimit = 10;
+const int requestLimit = 50;
 
 @interface TimelineViewController ()
 
@@ -55,6 +55,7 @@ static UIRefreshControl *refreshControl;
         }else{
             for (NSDictionary *tweet in tweets){
                 TweetEntity *tweetEntity = [[TweetEntity alloc] init];
+                NSLog(@"entities:%@", tweet[@"entities"]);
                 [tweetEntity setEntity:tweet];
                 [self.tweets addObject:tweetEntity];
             }
@@ -86,6 +87,7 @@ static UIRefreshControl *refreshControl;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"TweetCell" bundle:nil] forCellReuseIdentifier:@"TweetCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TweetImageCell" bundle:nil] forCellReuseIdentifier:@"TweetImageCell"];
     self.tweetCell = [self.tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     
     [self fetch:requestLimit maxId:0];
@@ -117,15 +119,32 @@ static UIRefreshControl *refreshControl;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TweetEntity *tweetEntity = self.tweets[indexPath.row];
+    static NSInteger minHeight;
+    
+    //メディア画像が設定されている場合
+    if(tweetEntity.mediaURL){
+        minHeight = 150;
+    }else{
+        minHeight = 100;
+    }
+    
     CGFloat height = [self.tweetCell calculateCellHeightWithText:tweetEntity.text];
-    CGFloat result = height < 100 ? 100 : height;
+    CGFloat result = height < minHeight ? minHeight : height;
     return result;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"TweetCell";
+    TweetEntity *tweetEntity = self.tweets[indexPath.row];
+    static NSString *CellIdentifier;
+
+    if(tweetEntity.mediaURL){
+         CellIdentifier = @"TweetImageCell";
+    } else {
+        CellIdentifier = @"TweetCell";
+    }
+
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[TweetCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -133,7 +152,6 @@ static UIRefreshControl *refreshControl;
     // Configure the cell...
     if([self.tweets count] > indexPath.row){
 
-        TweetEntity *tweetEntity = self.tweets[indexPath.row];
         cell.tweetEntity = tweetEntity;
         
         cell.avatarImageViewPressed = ^(void){
@@ -164,7 +182,6 @@ static UIRefreshControl *refreshControl;
 
     vc.avatarImageViewPressed = ^(void){
         [self pushUserVC:tweetEntity];
-        NSLog(@"imageViewPressedBlock");
     };
     
     
