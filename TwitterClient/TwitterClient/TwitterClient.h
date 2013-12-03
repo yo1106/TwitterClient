@@ -37,6 +37,4 @@
                                                    NSHTTPURLResponse *urlResponse,
                                                    NSError *error))success;
 
-
-
 @end
