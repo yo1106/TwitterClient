@@ -51,7 +51,7 @@ static UIRefreshControl *refreshControl;
                                                           options: NSJSONReadingMutableLeaves error:&jsonError];
 
         if([NSStringFromClass([tweets class]) isEqual: @"__NSCFDictionary"]){
-            NSLog(@"%@", tweets);
+
         }else{
             for (NSDictionary *tweet in tweets){
                 TweetEntity *tweetEntity = [[TweetEntity alloc] init];
@@ -64,8 +64,7 @@ static UIRefreshControl *refreshControl;
             TweetEntity *lastTweet = [self.tweets lastObject];
 //            self.lastTweetId = @"405572873110028288";
             self.lastTweetId = lastTweet.tweetId;
-            NSLog(@"firstTweetId:%@", firstTweet.tweetId);
-            NSLog(@"lastTweetId:%@", lastTweet.tweetId);
+
             [self.tweets removeLastObject];
             
             
@@ -112,25 +111,20 @@ static UIRefreshControl *refreshControl;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-//    NSLog(@"numberOfRowsInSection:%lu", (unsigned long)[self.tweets count]);
     return [self.tweets count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TweetEntity *tweetEntity = self.tweets[indexPath.row];
-//    NSLog(@"%@", tweetEntity.text);
-//    NSLog(@"%f", [self.cellForCalcHeight calculateCellHeightWithText:tweetEntity.text]);
     CGFloat height = [self.tweetCell calculateCellHeightWithText:tweetEntity.text];
     CGFloat result = height < 100 ? 100 : height;
-//    NSLog(@"height:%f, result:%f, text:%@", height, result, tweetEntity.text);
     return result;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"cellForRowAtIndexPath");
     static NSString *CellIdentifier = @"TweetCell";
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -161,22 +155,34 @@ static UIRefreshControl *refreshControl;
 
 
 // セルをタップで呼ばれる
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    NSLog(@"didSelectRowAtIndexPath");
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    TweetViewController *viewController = [[TweetViewController alloc] init];
-//    
-//    [self.navigationController pushViewController:viewController animated:YES];
-//
-//    TweetEntity *tweetEntity = self.tweets[indexPath.row];
-//    viewController.tweetEntity = tweetEntity;
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TweetViewController *vc = [[TweetViewController alloc] init];
+    TweetEntity *tweetEntity = self.tweets[indexPath.row];
+    vc.tweetEntity = tweetEntity;
+
+    vc.avatarImageViewPressed = ^(void){
+        [self pushUserVC:tweetEntity];
+        NSLog(@"imageViewPressedBlock");
+    };
+    
+    
+    [self.navigationController pushViewController:vc animated:YES];
+
+
+}
+
+- (void)pushUserVC:(TweetEntity*)tweetEntity
+{
+    UserViewController *vc = [[UserViewController alloc] initWithNibName:nil bundle:nil];
+    vc.userEntity = tweetEntity.userEntity;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 //最後まで来たら呼ばれる？
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-//    NSLog(@"scrollViewDidEndDecelerating");
     
 
 

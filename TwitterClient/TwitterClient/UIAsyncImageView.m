@@ -25,7 +25,6 @@
     
     //scroll中にロードしない場合はこっち
 //    conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-//    NSLog(@"loadImage");
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
@@ -44,12 +43,10 @@
     self.image = [UIImage imageWithData:data];
     self.contentMode = UIViewContentModeScaleAspectFit;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    NSLog(@"connectionDidFinishLoading");
     [self abort];
 }
 
 -(void)abort{
-//    NSLog(@"abort");
     if(conn != nil){
         [conn cancel];
         conn = nil;

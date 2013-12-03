@@ -40,6 +40,9 @@
     self.tweetUserNameLabel.text = self.tweetEntity.userEntity.name;
     
     [self.tweetUserAvatarImageView loadImage:self.tweetEntity.userEntity.profileImageURL];
+    self.tweetUserAvatarImageView.tag = [self.tweetEntity.userEntity.twitterId intValue];
+
+    self.tweetUserAvatarImageView.imageViewPressedBlock = self.avatarImageViewPressed;
 }
 
 - (void)didReceiveMemoryWarning

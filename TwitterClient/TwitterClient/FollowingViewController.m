@@ -15,6 +15,9 @@
 
 @implementation FollowingViewController
 
+static UIRefreshControl *refreshControl;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,23 +42,34 @@
     
     self.title = @"フォロー";
 
+    refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    
+    [self fetch];
+
+}
+
+-(void)fetch
+{
     TwitterClient *client = [TwitterClient sharedInstance];
-    [client fetchFriendsList:self.owner.screenName count:10 cursor:[NSString stringWithFormat:@"%d", -1] success:^(NSData *responseData,
-                                                        NSHTTPURLResponse *urlResponse,
-                                                        NSError *error){
+    [client fetchFriendsList:self.owner.screenName count:50 cursor:self.nextCursor success:^(NSData *responseData,
+                                                                                                                   NSHTTPURLResponse *urlResponse,
+                                                                                                                   NSError *error){
         NSError *jsonError;
         NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseData
-                                                    options: NSJSONReadingMutableLeaves error:&jsonError];
+                                                                 options: NSJSONReadingMutableLeaves error:&jsonError];
         
+        self.nextCursor = response[@"next_cursor"];
         NSArray *users = response[@"users"];
         for (NSDictionary *user in users){
             UserEntity *userEntity = [[UserEntity alloc] init];
             [userEntity setEntity:user];
             [self.users addObject:userEntity];
         }
-
-        [self refreshTableOnFront];
         
+        [self refreshTableOnFront];
+        NSLog(@"response:%@", response);
     }];
 }
 
@@ -74,7 +88,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"numberOfRowsInSection%d", [self.users count]);
     return [self.users count];
 }
 
@@ -93,7 +106,10 @@
         cell.userEntity = userEntity;
 
     }
-    
+
+    if([self.users count] < indexPath.row+3){
+        [self fetch];
+    }
     return cell;
 }
 
@@ -109,6 +125,26 @@
     return 60;
 }
 
+// セルをタップで呼ばれる
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UserViewController *vc = [[UserViewController alloc] init];
+
+    [self.navigationController pushViewController:vc animated:YES];
+
+    UserEntity *userEntity = self.users[indexPath.row];
+    vc.userEntity = userEntity;
+}
+
+
+- (void)refresh
+{
+    [self.users removeAllObjects];
+    [self fetch];
+    [refreshControl endRefreshing];
+    [self refreshTableOnFront];
+}
 
 //テーブルの内容をセット
 - (void)refreshTable {

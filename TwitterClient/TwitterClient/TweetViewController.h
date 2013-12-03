@@ -10,6 +10,7 @@
 
 #import "Tweet.h"
 
+#import "UIImageView+Action.h"
 #import "UIAsyncImageView.h"
 
 @interface TweetViewController : UIViewController
@@ -21,5 +22,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *tweetUserScreenNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tweetTextLabel;
 @property (strong, nonatomic) IBOutlet UILabel *tweetCreatedLabel;
+
+@property (strong, nonatomic) void(^avatarImageViewPressed)();
+
 
 @end

@@ -14,6 +14,7 @@
 
 #import "UserCell.h"
 
+#import "UserViewController.h"
 
 @interface FollowingViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
@@ -21,6 +22,6 @@
 
 @property (strong, nonatomic) UserEntity *owner;
 @property (nonatomic, strong) NSMutableArray *users;
-
+@property (strong, nonatomic) NSString *nextCursor;
 
 @end

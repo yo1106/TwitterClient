@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+
+#import "UIImageView+Action.h"
 #import "UIAsyncImageView.h"
 
 #import "FollowingViewController.h"
@@ -23,9 +25,14 @@
 @property (strong, nonatomic) IBOutlet UIButton *followerCount;
 
 @property (strong, nonatomic) IBOutlet UIAsyncImageView *userCoverImageView;
-@property (strong, nonatomic) IBOutlet UIAsyncImageView *userAvatarImageView;
+@property (weak, nonatomic) IBOutlet UIAsyncImageView *userAvatarImageView;
+
 
 @property (strong, nonatomic) void(^followingCountButtonPressed)();
+
+@property (strong, nonatomic) void(^avatarImageViewPressed)();
+
+
 
 - (IBAction)pressFollowingButton:(id)sender;
 

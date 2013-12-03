@@ -19,7 +19,6 @@
         UserSubview *view = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
         [self addSubview:view];
     }
-    NSLog(@"initWithFrame");
     return self;
 }
 
@@ -34,7 +33,6 @@
 
 - (void)layoutSubviews
 {
-    NSLog(@"layoutSubviews");
     [super layoutSubviews];
 
     self.userNameLabel.text = self.userEntity.name;
@@ -42,13 +40,17 @@
     [self.userAvatarImageView loadImage:self.userEntity.profileImageURL];
     [self.userCoverImageView loadImage:self.userEntity.profileBannerURL];
 
-    NSLog(@"%@", self.userEntity.followingCount);
   
     [self.followerCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.followersCount] forState:UIControlStateNormal];
     
     [self.followingCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.followingCount] forState:UIControlStateNormal];
 
     [self.tweetCount setTitle:[NSString stringWithFormat:@"%@", self.userEntity.tweetsCount] forState:UIControlStateNormal];
+
+    if(self.avatarImageViewPressed){
+        self.avatarImageViewPressed();
+        self.userAvatarImageView.imageViewPressedBlock = self.avatarImageViewPressed;
+    }
 }
 
 - (IBAction)pressFollowingButton:(id)sender {

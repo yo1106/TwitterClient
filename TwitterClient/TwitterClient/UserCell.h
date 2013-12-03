@@ -20,4 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *userScreenNameLabel;
 
+@property (strong, nonatomic) void(^avatarImageViewPressed)();
+
+
 @end

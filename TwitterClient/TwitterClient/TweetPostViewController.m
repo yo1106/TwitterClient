@@ -50,7 +50,6 @@
             id tweets = [NSJSONSerialization JSONObjectWithData:responseData
                                                         options: NSJSONReadingMutableLeaves error:&jsonError];
             
-            NSLog(@"%@", tweets);
         }];
         
     }else{
@@ -62,7 +61,6 @@
             id tweets = [NSJSONSerialization JSONObjectWithData:responseData
                                                         options: NSJSONReadingMutableLeaves error:&jsonError];
             
-            NSLog(@"%@", tweets);
         }];
         
         

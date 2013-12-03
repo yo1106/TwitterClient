@@ -21,7 +21,6 @@
     self.twitterId = dict[@"id"];
     self.screenName = dict[@"screen_name"];
     
-    NSLog(@"User:%@", dict);
 }
 
 -(void)fetchLookup{
@@ -33,9 +32,8 @@
         id tweets = [NSJSONSerialization JSONObjectWithData:responseData
                                                     options: NSJSONReadingMutableLeaves error:&jsonError];
         
-        NSLog(@"%@", tweets);
         if([NSStringFromClass([tweets class]) isEqual: @"__NSCFDictionary"]){
-            NSLog(@"%@", tweets);
+
         }else{
             self.profileBannerURL = [NSString stringWithFormat:@"%@/%@", tweets[0][@"profile_banner_url"], @"mobile_retina"];
         }
@@ -47,7 +45,6 @@
     if(!_profileBannerURL){
         [self fetchLookup];
     }
-    NSLog(@"profileBannerURL:%@", _profileBannerURL);
 
     return _profileBannerURL;
 }
