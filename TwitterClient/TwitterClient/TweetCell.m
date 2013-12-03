@@ -36,6 +36,8 @@
     frame.size.height = self.tweetTextLabel.frame.size.height;
     self.tweetTextLabel.frame = frame;
     
+    //これを書いておかないと、セルの高さが変わるのと一緒に画像サイズが変わっちゃう。
+    self.tweetUserAvatarImageView.frame = CGRectMake(self.tweetUserAvatarImageView.frame.origin.x, self.tweetUserAvatarImageView.frame.origin.y, 44, 44);
     
     //    cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
     self.tweetCreated.text = self.tweetEntity.created_at;

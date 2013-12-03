@@ -123,11 +123,12 @@ static UIRefreshControl *refreshControl;
     
     //メディア画像が設定されている場合
     if(tweetEntity.mediaURL){
-        minHeight = 150;
+        minHeight = 165;
+
     }else{
         minHeight = 100;
     }
-    
+
     CGFloat height = [self.tweetCell calculateCellHeightWithText:tweetEntity.text];
     CGFloat result = height < minHeight ? minHeight : height;
     return result;
