@@ -123,7 +123,7 @@ static UIRefreshControl *refreshControl;
     
     //メディア画像が設定されている場合
     if(tweetEntity.mediaURL){
-        addHeight = 108;//TODO: ハードコーディングはよくないよね。
+        addHeight = 130;//TODO: ハードコーディングはよくないよね。
     }
 
     CGFloat height = [self.tweetCell calculateCellHeightWithText:tweetEntity.text];
@@ -154,18 +154,9 @@ static UIRefreshControl *refreshControl;
         cell.tweetEntity = tweetEntity;
         
         cell.avatarImageViewPressed = ^(void){
-            
-            UserViewController *vc = [[UserViewController alloc] initWithNibName:nil bundle:nil];
-            vc.userEntity = tweetEntity.userEntity;
-            [self.navigationController pushViewController:vc animated:YES];
-            
+            [self pushUserVC:tweetEntity];            
         };
 
-//        [cell.mediaImageView setupImageViewerWithDatasource:self initialIndex:indexPath.row onOpen:^(void){
-//            NSLog(@"open");
-//        } onClose:^(void){
-//            NSLog(@"close");
-//        }];
         [cell.mediaImageView setupImageViewer];
     }
 

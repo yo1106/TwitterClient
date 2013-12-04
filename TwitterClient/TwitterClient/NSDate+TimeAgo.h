@@ -1,3 +1,13 @@
+//
+//  NSDate+TimeAgo.h
+//  TwitterClient
+//
+//  Created by yukichang on 2013/12/04.
+//  Copyright (c) 2013年 yukichang. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
 @interface NSDate (TimeAgo)
 - (NSString *) timeAgo;
 - (NSString *) timeAgoWithLimit:(NSTimeInterval)limit;
@@ -13,4 +23,3 @@
 - (NSString *)dateTimeUntilNow;
 
 @end
-

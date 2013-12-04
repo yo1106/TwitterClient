@@ -10,8 +10,12 @@
 
 #import "AppDelegate.h"
 
+#import "NSDate+TimeAgo.h"
+
 int main(int argc, char * argv[])
 {
+    
+    NSLog(@"test%@", [[[NSDate alloc] initWithTimeIntervalSince1970:0] timeAgo]);
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

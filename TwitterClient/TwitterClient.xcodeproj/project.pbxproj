@@ -19,13 +19,13 @@
 		F63354F7184DCB8E0059A659 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F63354EE184DCB8E0059A659 /* UIImageView+AFNetworking.m */; };
 		F64D643A184DD7F50036680C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64D6439184DD7F50036680C /* MobileCoreServices.framework */; };
 		F64D643B184DD8010036680C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E1DAF41845DDEF006874FF /* SystemConfiguration.framework */; };
+		F66F36BD184F4A99004E0E6C /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F36BC184F4A99004E0E6C /* NSDate+TimeAgo.m */; };
+		F66F36BF184F4C1D004E0E6C /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F66F36BE184F4C1D004E0E6C /* NSDateTimeAgo.bundle */; };
 		F6751149184D7988002940CD /* carrypamyupamyu_a01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6751148184D7988002940CD /* carrypamyupamyu_a01.jpg */; };
-		F675114B184D839C002940CD /* TweetImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F675114A184D839C002940CD /* TweetImageCell.xib */; };
 		F6751152184DC83D002940CD /* MHFacebookImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = F675114E184DC83D002940CD /* MHFacebookImageViewer.m */; };
 		F6751153184DC83D002940CD /* Done.png in Resources */ = {isa = PBXBuildFile; fileRef = F6751150184DC83D002940CD /* Done.png */; };
 		F6751154184DC83D002940CD /* Done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6751151184DC83D002940CD /* Done@2x.png */; };
-		F689595E184F180400D41F7F /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6895959184F180400D41F7F /* NSDate+TimeAgo.m */; };
-		F6895960184F180400D41F7F /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F689595B184F180400D41F7F /* NSDateTimeAgo.bundle */; };
+		F6895966184F3D4D00D41F7F /* TweetImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6895965184F3D4D00D41F7F /* TweetImageCell.xib */; };
 		F6984D6B184C36F500DAE454 /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6984D6A184C36F500DAE454 /* FollowingViewController.m */; };
 		F6984D6E184C4D9700DAE454 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6984D6D184C4D9700DAE454 /* UserCell.m */; };
 		F6984D70184C4DD400DAE454 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6984D6F184C4DD400DAE454 /* UserCell.xib */; };
@@ -106,17 +106,17 @@
 		F63354EE184DCB8E0059A659 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		F64D6436184DCD790036680C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F64D6439184DD7F50036680C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F66F36BB184F4A99004E0E6C /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		F66F36BC184F4A99004E0E6C /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		F66F36BE184F4C1D004E0E6C /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
 		F6751148184D7988002940CD /* carrypamyupamyu_a01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carrypamyupamyu_a01.jpg; sourceTree = "<group>"; };
-		F675114A184D839C002940CD /* TweetImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetImageCell.xib; sourceTree = "<group>"; };
 		F675114D184DC83D002940CD /* MHFacebookImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFacebookImageViewer.h; sourceTree = "<group>"; };
 		F675114E184DC83D002940CD /* MHFacebookImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFacebookImageViewer.m; sourceTree = "<group>"; };
 		F6751150184DC83D002940CD /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Done.png; sourceTree = "<group>"; };
 		F6751151184DC83D002940CD /* Done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Done@2x.png"; sourceTree = "<group>"; };
 		F67511F4184DC9BF002940CD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F6895958184F180400D41F7F /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
-		F6895959184F180400D41F7F /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
-		F689595B184F180400D41F7F /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NSDateTimeAgo.bundle; path = "NSDate-TimeAgo-master/NSDateTimeAgo.bundle"; sourceTree = "<group>"; };
 		F6895964184F1E1100D41F7F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6895965184F3D4D00D41F7F /* TweetImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetImageCell.xib; sourceTree = "<group>"; };
 		F6984D69184C36F500DAE454 /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
 		F6984D6A184C36F500DAE454 /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		F6984D6C184C4D9700DAE454 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -272,16 +272,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F6895956184F180400D41F7F /* NSDate-TimeAgo */ = {
-			isa = PBXGroup;
-			children = (
-				F6895958184F180400D41F7F /* NSDate+TimeAgo.h */,
-				F6895959184F180400D41F7F /* NSDate+TimeAgo.m */,
-			);
-			name = "NSDate-TimeAgo";
-			path = "NSDate-TimeAgo-master";
-			sourceTree = "<group>";
-		};
 		F6E111C718442DEE001C5226 = {
 			isa = PBXGroup;
 			children = (
@@ -346,7 +336,7 @@
 		F6E111DA18442DEF001C5226 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F689595B184F180400D41F7F /* NSDateTimeAgo.bundle */,
+				F66F36BE184F4C1D004E0E6C /* NSDateTimeAgo.bundle */,
 				F6E111DB18442DEF001C5226 /* TwitterClient-Info.plist */,
 				F6E111DC18442DEF001C5226 /* InfoPlist.strings */,
 				F6E111DF18442DEF001C5226 /* main.m */,
@@ -399,7 +389,7 @@
 				F6E1121718444309001C5226 /* TweetCell.h */,
 				F6E1121818444309001C5226 /* TweetCell.m */,
 				F6E1121A18444329001C5226 /* TweetCell.xib */,
-				F675114A184D839C002940CD /* TweetImageCell.xib */,
+				F6895965184F3D4D00D41F7F /* TweetImageCell.xib */,
 				F6984D6C184C4D9700DAE454 /* UserCell.h */,
 				F6984D6D184C4D9700DAE454 /* UserCell.m */,
 				F6984D6F184C4DD400DAE454 /* UserCell.xib */,
@@ -425,7 +415,6 @@
 		F6E1122018447533001C5226 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				F6895956184F180400D41F7F /* NSDate-TimeAgo */,
 				F63354DB184DCB790059A659 /* AFNetworking */,
 				F675114C184DC83D002940CD /* MHFBImageViewController */,
 				F6E1DAD11845DD26006874FF /* AviarySDK */,
@@ -435,6 +424,8 @@
 				F6E1DAC518458D3C006874FF /* TwitterClient.m */,
 				F6DAF27318488FAB0042B59F /* UIImageView+Action.h */,
 				F6DAF27418488FAB0042B59F /* UIImageView+Action.m */,
+				F66F36BB184F4A99004E0E6C /* NSDate+TimeAgo.h */,
+				F66F36BC184F4A99004E0E6C /* NSDate+TimeAgo.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -549,16 +540,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E1DAD01845D990006874FF /* TweetPostViewController.xib in Resources */,
-				F6895960184F180400D41F7F /* NSDateTimeAgo.bundle in Resources */,
 				F6E1121B18444329001C5226 /* TweetCell.xib in Resources */,
 				F6E1121218443906001C5226 /* TimelineViewController.xib in Resources */,
+				F66F36BF184F4C1D004E0E6C /* NSDateTimeAgo.bundle in Resources */,
 				F6E111DE18442DEF001C5226 /* InfoPlist.strings in Resources */,
 				F6E1DACB1845C52C006874FF /* TweetViewController.xib in Resources */,
 				F6751154184DC83D002940CD /* Done@2x.png in Resources */,
 				F6984D70184C4DD400DAE454 /* UserCell.xib in Resources */,
 				F6E1DADF1845DD26006874FF /* AviarySDKResources.bundle in Resources */,
 				F6E111E618442DEF001C5226 /* Images.xcassets in Resources */,
-				F675114B184D839C002940CD /* TweetImageCell.xib in Resources */,
+				F6895966184F3D4D00D41F7F /* TweetImageCell.xib in Resources */,
 				F6751153184DC83D002940CD /* Done.png in Resources */,
 				F6751149184D7988002940CD /* carrypamyupamyu_a01.jpg in Resources */,
 				F6E3ACD318489A3B007DA3F8 /* UserSubview.xib in Resources */,
@@ -589,7 +580,7 @@
 				F63354F3184DCB8E0059A659 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F6E1121118443906001C5226 /* TimelineViewController.m in Sources */,
 				F6DAF27518488FAB0042B59F /* UIImageView+Action.m in Sources */,
-				F689595E184F180400D41F7F /* NSDate+TimeAgo.m in Sources */,
+				F66F36BD184F4A99004E0E6C /* NSDate+TimeAgo.m in Sources */,
 				F63354F4184DCB8E0059A659 /* AFPropertyListRequestOperation.m in Sources */,
 				F6E1DACF1845D990006874FF /* TweetPostViewController.m in Sources */,
 				F63354F7184DCB8E0059A659 /* UIImageView+AFNetworking.m in Sources */,

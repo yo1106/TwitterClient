@@ -1,3 +1,11 @@
+//
+//  NSDate+TimeAgo.m
+//  TwitterClient
+//
+//  Created by yukichang on 2013/12/04.
+//  Copyright (c) 2013年 yukichang. All rights reserved.
+//
+
 #import "NSDate+TimeAgo.h"
 
 @interface NSDate()
@@ -96,7 +104,6 @@ NSLocalizedStringFromTableInBundle(key, @"NSDateTimeAgo", [NSBundle bundleWithPa
                                                fromDate:self
                                                  toDate:now
                                                 options:0];
-    
     if (components.year >= 1)
     {
         if (components.year == 1)
@@ -284,7 +291,7 @@ NSLocalizedStringFromTableInBundle(key, @"NSDateTimeAgo", [NSBundle bundleWithPa
 {
     if (fabs([self timeIntervalSinceDate:[NSDate date]]) <= limit)
         return [self timeAgo];
-
+    
     return [formatter stringFromDate:self];
 }
 
@@ -329,3 +336,4 @@ NSLocalizedStringFromTableInBundle(key, @"NSDateTimeAgo", [NSBundle bundleWithPa
 #pragma clang diagnostic pop
 
 @end
+

@@ -22,7 +22,6 @@
 
 - (void)layoutSubviews
 {
-    
     [super layoutSubviews];
 
     self.tweetUserNameLabel.text = self.tweetEntity.userEntity.name;
@@ -36,18 +35,15 @@
     [self.tweetTextLabel sizeToFit];
     frame.size.height = self.tweetTextLabel.frame.size.height;
     self.tweetTextLabel.frame = frame;
-
     NSInteger labelHeightDiff = frame.size.height - beforeHeight;
+//    NSLog(@"height:%f", frame.size.height);
+    
     
     //これを書いておかないと、セルの高さが変わるのと一緒に画像サイズが変わっちゃう。
     self.tweetUserAvatarImageView.frame = CGRectMake(self.tweetUserAvatarImageView.frame.origin.x, self.tweetUserAvatarImageView.frame.origin.y, 44, 44);
-    
-    //    cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
-    NSLog(@"%@", [self.tweetEntity.createdDate dateTimeAgo]);
-//    NSDate *date = [[NSDate alloc] init]
+
     self.tweetCreated.text = [self.tweetEntity.createdDate dateTimeAgo];
 
-    
     NSString *imageURL = self.tweetEntity.userEntity.profileImageURL;
     [self.tweetUserAvatarImageView loadImage:imageURL];
     self.tweetUserAvatarImageView.tag = [self.tweetEntity.userEntity.twitterId intValue];
@@ -65,7 +61,6 @@
     if(self.avatarImageViewPressed){
         self.tweetUserAvatarImageView.imageViewPressedBlock = self.avatarImageViewPressed;
     }
-
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

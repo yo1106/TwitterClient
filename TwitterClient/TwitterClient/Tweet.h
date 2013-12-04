@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "User.h"
+#import "NSDate+TimeAgo.h"
+
 
 @interface TweetEntity : NSObject
 
