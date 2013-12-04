@@ -35,10 +35,18 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8B-bA-vH5">
+                        <rect key="frame" x="271" y="6" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="mediaImageView" destination="Qn7-zj-9W0" id="Zyw-W4-gqB"/>
+                <outlet property="tweetCreated" destination="w8B-bA-vH5" id="H4g-Lh-xuJ"/>
                 <outlet property="tweetTextLabel" destination="byL-xD-Xkl" id="KR5-9i-Rbg"/>
                 <outlet property="tweetUserAvatarImageView" destination="WB2-mt-l75" id="LdE-t3-BmW"/>
                 <outlet property="tweetUserNameLabel" destination="m1c-AY-bMN" id="tkJ-2p-m81"/>

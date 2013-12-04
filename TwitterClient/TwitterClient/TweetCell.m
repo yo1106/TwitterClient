@@ -43,7 +43,11 @@
     self.tweetUserAvatarImageView.frame = CGRectMake(self.tweetUserAvatarImageView.frame.origin.x, self.tweetUserAvatarImageView.frame.origin.y, 44, 44);
     
     //    cell.tweetUserNameLabel.text = tweetEntity.userEntity.name;
-    self.tweetCreated.text = self.tweetEntity.created_at;
+    NSLog(@"%@", [self.tweetEntity.createdDate dateTimeAgo]);
+//    NSDate *date = [[NSDate alloc] init]
+    self.tweetCreated.text = [self.tweetEntity.createdDate dateTimeAgo];
+
+    
     NSString *imageURL = self.tweetEntity.userEntity.profileImageURL;
     [self.tweetUserAvatarImageView loadImage:imageURL];
     self.tweetUserAvatarImageView.tag = [self.tweetEntity.userEntity.twitterId intValue];

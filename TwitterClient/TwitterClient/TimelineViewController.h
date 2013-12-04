@@ -15,8 +15,7 @@
 
 
 @interface TimelineViewController : UIViewController<UITableViewDelegate,
-                                                    UITableViewDataSource,
-                                                    MHFacebookImageViewerDatasource>
+                                                    UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *tweets;
 @property (nonatomic, strong) NSString *lastTweetId;

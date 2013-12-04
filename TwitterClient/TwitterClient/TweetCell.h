@@ -10,6 +10,7 @@
 
 #import "Tweet.h"
 
+#import "NSDate+TimeAgo.h"
 #import "UIImageView+Action.h"
 #import "UIAsyncImageView.h"
 

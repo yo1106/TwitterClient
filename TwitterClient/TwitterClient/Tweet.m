@@ -20,6 +20,10 @@
         self.mediaURL = dict[@"entities"][@"media"][0][@"media_url"];
     }
     
+    NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
+    [inputDateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
+    self.createdDate = [inputDateFormatter dateFromString:self.created_at];
+    NSLog(@"%@", self.created_at);
     UserEntity *userEntity = [[UserEntity alloc] init];
     [userEntity setEntity:dict[@"user"]];
     self.userEntity = userEntity;
