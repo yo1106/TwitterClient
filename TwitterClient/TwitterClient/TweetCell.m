@@ -32,9 +32,12 @@
     
     // こいつを書いておかないと、labelの横幅が勝手に変わってしまってデザインが崩れる。
     CGRect frame = self.tweetTextLabel.frame;
+    NSInteger beforeHeight = frame.size.height;
     [self.tweetTextLabel sizeToFit];
     frame.size.height = self.tweetTextLabel.frame.size.height;
     self.tweetTextLabel.frame = frame;
+
+    NSInteger labelHeightDiff = frame.size.height - beforeHeight;
     
     //これを書いておかないと、セルの高さが変わるのと一緒に画像サイズが変わっちゃう。
     self.tweetUserAvatarImageView.frame = CGRectMake(self.tweetUserAvatarImageView.frame.origin.x, self.tweetUserAvatarImageView.frame.origin.y, 44, 44);
@@ -47,6 +50,12 @@
 
     if(self.tweetEntity.mediaURL){
         [self.mediaImageView loadImage:self.tweetEntity.mediaURL];
+
+        CGRect mediaImageViewFrame = self.mediaImageView.frame;
+        mediaImageViewFrame.origin.y = mediaImageViewFrame.origin.y+labelHeightDiff;
+        self.mediaImageView.frame = mediaImageViewFrame;
+        
+
     }
 
     if(self.avatarImageViewPressed){

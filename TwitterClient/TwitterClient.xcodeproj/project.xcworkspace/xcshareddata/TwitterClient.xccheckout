@@ -17,6 +17,8 @@
 	<string>TwitterClient/TwitterClient.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>EE42850C-AAB6-45EC-A145-17FD2255F52D</key>
+		<string>../../TwitterClient/AFNetworking</string>
 		<key>F363BCBC-E33E-4D7C-9D45-79B7BB31A1A3</key>
 		<string>../../..</string>
 	</dict>
@@ -28,6 +30,14 @@
 	<string>F363BCBC-E33E-4D7C-9D45-79B7BB31A1A3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE42850C-AAB6-45EC-A145-17FD2255F52D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AFNetworking</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

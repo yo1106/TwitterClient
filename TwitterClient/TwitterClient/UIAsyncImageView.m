@@ -41,8 +41,8 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     self.image = [UIImage imageWithData:data];
-    self.contentMode = UIViewContentModeScaleAspectFit;
-    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    self.contentMode = UIViewContentModeScaleAspectFit;
+//    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self abort];
 }
 
@@ -59,5 +59,4 @@
 - (void)dealloc {
     [conn cancel];
 }
-
 @end

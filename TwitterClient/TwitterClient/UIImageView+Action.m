@@ -37,7 +37,7 @@ static char kImageViewPressedBlockKey;  // 一意に決まって変更されな�
 // 画像にタッチイベントの設定
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [super touchesBegan:touches withEvent:event];
+//    [super touchesBegan:touches withEvent:event];
 
     if (self.imageViewPressedBlock) {
         self.imageViewPressedBlock();

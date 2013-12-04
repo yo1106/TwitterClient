@@ -11,8 +11,12 @@
 #import <Social/Social.h>
 
 #import "UserViewController.h"
+#import "MHFacebookImageViewer.h"
 
-@interface TimelineViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@interface TimelineViewController : UIViewController<UITableViewDelegate,
+                                                    UITableViewDataSource,
+                                                    MHFacebookImageViewerDatasource>
 
 @property (nonatomic, strong) NSMutableArray *tweets;
 @property (nonatomic, strong) NSString *lastTweetId;

@@ -145,7 +145,6 @@ static ACAccount *account = nil;
     if(cursor){
         [params setObject:cursor forKey:@"cursor"];
     }
-    NSLog(@"%@", params);
     
     //リクエストを生成
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", apiBaseURL, @"friends/list.json"]];

@@ -55,7 +55,6 @@ static UIRefreshControl *refreshControl;
         }else{
             for (NSDictionary *tweet in tweets){
                 TweetEntity *tweetEntity = [[TweetEntity alloc] init];
-                NSLog(@"entities:%@", tweet[@"entities"]);
                 [tweetEntity setEntity:tweet];
                 [self.tweets addObject:tweetEntity];
             }
@@ -119,20 +118,19 @@ static UIRefreshControl *refreshControl;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TweetEntity *tweetEntity = self.tweets[indexPath.row];
-    static NSInteger minHeight;
+    NSInteger addHeight = 0;
+    NSInteger minHeight = 100;
     
     //メディア画像が設定されている場合
     if(tweetEntity.mediaURL){
-        minHeight = 165;
-
-    }else{
-        minHeight = 100;
+        addHeight = 108;//TODO: ハードコーディングはよくないよね。
     }
 
     CGFloat height = [self.tweetCell calculateCellHeightWithText:tweetEntity.text];
     CGFloat result = height < minHeight ? minHeight : height;
-    return result;
+    return result+addHeight;
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -162,6 +160,13 @@ static UIRefreshControl *refreshControl;
             [self.navigationController pushViewController:vc animated:YES];
             
         };
+
+//        [cell.mediaImageView setupImageViewerWithDatasource:self initialIndex:indexPath.row onOpen:^(void){
+//            NSLog(@"open");
+//        } onClose:^(void){
+//            NSLog(@"close");
+//        }];
+        [cell.mediaImageView setupImageViewer];
     }
 
     if([self.tweets count] < indexPath.row+3){
@@ -170,8 +175,6 @@ static UIRefreshControl *refreshControl;
     
     return cell;
 }
-
-
 
 // セルをタップで呼ばれる
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
