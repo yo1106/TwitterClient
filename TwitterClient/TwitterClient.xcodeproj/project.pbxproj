@@ -729,8 +729,9 @@
 				GCC_PREFIX_HEADER = "TwitterClient/TwitterClient-Prefix.pch";
 				INFOPLIST_FILE = "TwitterClient/TwitterClient-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"${PROJECT_DIR}/**",
 					"$(inherited)",
-					/Users/yukichang/Documents/workspace/TwitterClient/TwitterClient/TwitterClient/AviarySDK,
+					"${BUILT_PRODUCTS_DIR}/Build/${BUILD_STYLE}-${PLATFORM_NAME}/**",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -757,8 +758,9 @@
 				GCC_PREFIX_HEADER = "TwitterClient/TwitterClient-Prefix.pch";
 				INFOPLIST_FILE = "TwitterClient/TwitterClient-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
+					"${PROJECT_DIR}/**",
 					"$(inherited)",
-					/Users/yukichang/Documents/workspace/TwitterClient/TwitterClient/TwitterClient/AviarySDK,
+					"${BUILT_PRODUCTS_DIR}/Build/${BUILD_STYLE}-${PLATFORM_NAME}/**",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

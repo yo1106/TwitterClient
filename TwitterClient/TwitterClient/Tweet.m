@@ -19,7 +19,7 @@
     if([[dict[@"entities"] allKeys] containsObject:@"media"]){
         self.mediaURL = dict[@"entities"][@"media"][0][@"media_url"];
     }
-    NSLog(@"%@", [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode]);
+
     NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
     [inputDateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:[[NSLocale currentLocale] objectForKey:NSLocaleCountryCode]]];//これがないと動かない。
 //  [inputDateFormatter setLocale:[NSLocale currentLocale]];　//こうしたら動かないから気をつけて！！！！！
